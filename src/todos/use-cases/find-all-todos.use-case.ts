@@ -11,7 +11,7 @@ export class FindAllTodosUseCase {
     async execute() { 
         try {
             this.logger.log("Fetching all todos...");
-            const todo = await this.findAllTodosRepository.findMany();
+            const todo = await this.findAllTodosRepository.findAll();
             this.logger.log("Todos fetched successfully!");
             return todo;
         } catch (error) {

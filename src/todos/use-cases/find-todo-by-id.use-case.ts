@@ -11,7 +11,7 @@ export class FindTodoByIdUseCase {
     async execute(id: string) { 
         try {
             this.logger.log("Fetching todo...");
-            const todo = await this.findTodoByIdRepository.findUnique({ where: { id } });
+            const todo = await this.findTodoByIdRepository.findById(id);
             this.logger.log("Todo fetched successfully!");
             return todo;
         } catch (error) {
