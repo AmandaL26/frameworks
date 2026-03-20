@@ -9,7 +9,7 @@ export class UpdateTodoUseCase {
         private readonly logger: Logger,
     ) {}
 
-    async execute(id: string, data: UpdateTodoDto) { 
+    async update(id: string, data: UpdateTodoDto) { 
         try {
             this.logger.log("Updating todo...");
             const todo = await this.updateTodoRepository.update(data, id);

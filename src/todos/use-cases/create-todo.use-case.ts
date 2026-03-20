@@ -9,7 +9,7 @@ export class CreateTodoUseCase {
         private readonly logger: Logger,
     ) {}
 
-    async execute(data: CreateTodoDto) { 
+    async create(data: CreateTodoDto) { 
         try {
             this.logger.log("Creating todo...");
             const todo = await this.createTodoRepository.create(data);

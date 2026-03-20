@@ -8,7 +8,7 @@ export class FindTodoByIdUseCase {
         private readonly logger: Logger,
     ) {}
 
-    async execute(id: string) { 
+    async findById(id: string) { 
         try {
             this.logger.log("Fetching todo...");
             const todo = await this.findTodoByIdRepository.findById(id);
