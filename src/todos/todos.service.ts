@@ -1,12 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
+import { CreateTodoUseCase, DeleteTodoUseCase, FindAllTodosUseCase, FindTodoByIdUseCase, UpdateTodoUseCase } from './use-cases';
 
-import { CreateTodoUseCase } from './use-cases/create-todo.use-case';
-import { FindAllTodosUseCase } from './use-cases/find-all-todos.use-case';
-import { FindTodoByIdUseCase } from './use-cases/find-todo-by-id.use.case';
-import { UpdateTodoUseCase } from './use-cases/update-todo.use-case';
-import { DeleteTodoUseCase } from './use-cases/delete-todo.use-case';
+
 
 @Injectable()
 export class TodosService {
