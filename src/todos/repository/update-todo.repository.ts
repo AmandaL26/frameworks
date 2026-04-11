@@ -7,6 +7,6 @@ export class UpdateTodoRepository {
     constructor(private readonly prisma: PrismaService) {}
 
     async update(data: UpdateTodoDto, id: string) {
-        return await this.prisma.todo.update({where: {id}},data);
+        return await this.prisma.todo.update({ where: { id }, data });
     }
 }
